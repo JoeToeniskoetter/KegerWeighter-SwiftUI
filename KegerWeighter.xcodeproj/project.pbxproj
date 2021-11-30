@@ -1,0 +1,585 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		25817704275664DD000A0888 /* KegerWeighterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25817703275664DD000A0888 /* KegerWeighterApp.swift */; };
+		25817706275664DD000A0888 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25817705275664DD000A0888 /* ContentView.swift */; };
+		25817708275664E2000A0888 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25817707275664E2000A0888 /* Assets.xcassets */; };
+		2581770B275664E2000A0888 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2581770A275664E2000A0888 /* Preview Assets.xcassets */; };
+		25817716275664E3000A0888 /* KegerWeighterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25817715275664E3000A0888 /* KegerWeighterTests.swift */; };
+		25817721275664E3000A0888 /* KegerWeighterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25817720275664E3000A0888 /* KegerWeighterUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		25817712275664E3000A0888 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 258176F8275664DC000A0888 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 258176FF275664DC000A0888;
+			remoteInfo = KegerWeighter;
+		};
+		2581771D275664E3000A0888 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 258176F8275664DC000A0888 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 258176FF275664DC000A0888;
+			remoteInfo = KegerWeighter;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		25817700275664DD000A0888 /* KegerWeighter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KegerWeighter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		25817703275664DD000A0888 /* KegerWeighterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KegerWeighterApp.swift; sourceTree = "<group>"; };
+		25817705275664DD000A0888 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		25817707275664E2000A0888 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2581770A275664E2000A0888 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2581770C275664E2000A0888 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		25817711275664E3000A0888 /* KegerWeighterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KegerWeighterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		25817715275664E3000A0888 /* KegerWeighterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KegerWeighterTests.swift; sourceTree = "<group>"; };
+		25817717275664E3000A0888 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2581771C275664E3000A0888 /* KegerWeighterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KegerWeighterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		25817720275664E3000A0888 /* KegerWeighterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KegerWeighterUITests.swift; sourceTree = "<group>"; };
+		25817722275664E3000A0888 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		258176FD275664DC000A0888 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2581770E275664E3000A0888 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		25817719275664E3000A0888 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		258176F7275664DC000A0888 = {
+			isa = PBXGroup;
+			children = (
+				25817702275664DD000A0888 /* KegerWeighter */,
+				25817714275664E3000A0888 /* KegerWeighterTests */,
+				2581771F275664E3000A0888 /* KegerWeighterUITests */,
+				25817701275664DD000A0888 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		25817701275664DD000A0888 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				25817700275664DD000A0888 /* KegerWeighter.app */,
+				25817711275664E3000A0888 /* KegerWeighterTests.xctest */,
+				2581771C275664E3000A0888 /* KegerWeighterUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		25817702275664DD000A0888 /* KegerWeighter */ = {
+			isa = PBXGroup;
+			children = (
+				25817703275664DD000A0888 /* KegerWeighterApp.swift */,
+				25817705275664DD000A0888 /* ContentView.swift */,
+				25817707275664E2000A0888 /* Assets.xcassets */,
+				2581770C275664E2000A0888 /* Info.plist */,
+				25817709275664E2000A0888 /* Preview Content */,
+			);
+			path = KegerWeighter;
+			sourceTree = "<group>";
+		};
+		25817709275664E2000A0888 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				2581770A275664E2000A0888 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		25817714275664E3000A0888 /* KegerWeighterTests */ = {
+			isa = PBXGroup;
+			children = (
+				25817715275664E3000A0888 /* KegerWeighterTests.swift */,
+				25817717275664E3000A0888 /* Info.plist */,
+			);
+			path = KegerWeighterTests;
+			sourceTree = "<group>";
+		};
+		2581771F275664E3000A0888 /* KegerWeighterUITests */ = {
+			isa = PBXGroup;
+			children = (
+				25817720275664E3000A0888 /* KegerWeighterUITests.swift */,
+				25817722275664E3000A0888 /* Info.plist */,
+			);
+			path = KegerWeighterUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		258176FF275664DC000A0888 /* KegerWeighter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 25817725275664E3000A0888 /* Build configuration list for PBXNativeTarget "KegerWeighter" */;
+			buildPhases = (
+				258176FC275664DC000A0888 /* Sources */,
+				258176FD275664DC000A0888 /* Frameworks */,
+				258176FE275664DC000A0888 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KegerWeighter;
+			productName = KegerWeighter;
+			productReference = 25817700275664DD000A0888 /* KegerWeighter.app */;
+			productType = "com.apple.product-type.application";
+		};
+		25817710275664E3000A0888 /* KegerWeighterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 25817728275664E3000A0888 /* Build configuration list for PBXNativeTarget "KegerWeighterTests" */;
+			buildPhases = (
+				2581770D275664E3000A0888 /* Sources */,
+				2581770E275664E3000A0888 /* Frameworks */,
+				2581770F275664E3000A0888 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				25817713275664E3000A0888 /* PBXTargetDependency */,
+			);
+			name = KegerWeighterTests;
+			productName = KegerWeighterTests;
+			productReference = 25817711275664E3000A0888 /* KegerWeighterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2581771B275664E3000A0888 /* KegerWeighterUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2581772B275664E3000A0888 /* Build configuration list for PBXNativeTarget "KegerWeighterUITests" */;
+			buildPhases = (
+				25817718275664E3000A0888 /* Sources */,
+				25817719275664E3000A0888 /* Frameworks */,
+				2581771A275664E3000A0888 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2581771E275664E3000A0888 /* PBXTargetDependency */,
+			);
+			name = KegerWeighterUITests;
+			productName = KegerWeighterUITests;
+			productReference = 2581771C275664E3000A0888 /* KegerWeighterUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		258176F8275664DC000A0888 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					258176FF275664DC000A0888 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					25817710275664E3000A0888 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 258176FF275664DC000A0888;
+					};
+					2581771B275664E3000A0888 = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = 258176FF275664DC000A0888;
+					};
+				};
+			};
+			buildConfigurationList = 258176FB275664DC000A0888 /* Build configuration list for PBXProject "KegerWeighter" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 258176F7275664DC000A0888;
+			productRefGroup = 25817701275664DD000A0888 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				258176FF275664DC000A0888 /* KegerWeighter */,
+				25817710275664E3000A0888 /* KegerWeighterTests */,
+				2581771B275664E3000A0888 /* KegerWeighterUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		258176FE275664DC000A0888 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2581770B275664E2000A0888 /* Preview Assets.xcassets in Resources */,
+				25817708275664E2000A0888 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2581770F275664E3000A0888 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2581771A275664E3000A0888 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		258176FC275664DC000A0888 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25817706275664DD000A0888 /* ContentView.swift in Sources */,
+				25817704275664DD000A0888 /* KegerWeighterApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2581770D275664E3000A0888 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25817716275664E3000A0888 /* KegerWeighterTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		25817718275664E3000A0888 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25817721275664E3000A0888 /* KegerWeighterUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		25817713275664E3000A0888 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 258176FF275664DC000A0888 /* KegerWeighter */;
+			targetProxy = 25817712275664E3000A0888 /* PBXContainerItemProxy */;
+		};
+		2581771E275664E3000A0888 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 258176FF275664DC000A0888 /* KegerWeighter */;
+			targetProxy = 2581771D275664E3000A0888 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		25817723275664E3000A0888 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		25817724275664E3000A0888 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		25817726275664E3000A0888 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"KegerWeighter/Preview Content\"";
+				DEVELOPMENT_TEAM = PYGD6FCN62;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = KegerWeighter/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.JoeToeniskoetter.KegerWeighter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		25817727275664E3000A0888 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"KegerWeighter/Preview Content\"";
+				DEVELOPMENT_TEAM = PYGD6FCN62;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = KegerWeighter/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.JoeToeniskoetter.KegerWeighter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		25817729275664E3000A0888 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PYGD6FCN62;
+				INFOPLIST_FILE = KegerWeighterTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.JoeToeniskoetter.KegerWeighterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KegerWeighter.app/KegerWeighter";
+			};
+			name = Debug;
+		};
+		2581772A275664E3000A0888 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PYGD6FCN62;
+				INFOPLIST_FILE = KegerWeighterTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.JoeToeniskoetter.KegerWeighterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KegerWeighter.app/KegerWeighter";
+			};
+			name = Release;
+		};
+		2581772C275664E3000A0888 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PYGD6FCN62;
+				INFOPLIST_FILE = KegerWeighterUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.JoeToeniskoetter.KegerWeighterUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = KegerWeighter;
+			};
+			name = Debug;
+		};
+		2581772D275664E3000A0888 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PYGD6FCN62;
+				INFOPLIST_FILE = KegerWeighterUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.JoeToeniskoetter.KegerWeighterUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = KegerWeighter;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		258176FB275664DC000A0888 /* Build configuration list for PBXProject "KegerWeighter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				25817723275664E3000A0888 /* Debug */,
+				25817724275664E3000A0888 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		25817725275664E3000A0888 /* Build configuration list for PBXNativeTarget "KegerWeighter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				25817726275664E3000A0888 /* Debug */,
+				25817727275664E3000A0888 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		25817728275664E3000A0888 /* Build configuration list for PBXNativeTarget "KegerWeighterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				25817729275664E3000A0888 /* Debug */,
+				2581772A275664E3000A0888 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2581772B275664E3000A0888 /* Build configuration list for PBXNativeTarget "KegerWeighterUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2581772C275664E3000A0888 /* Debug */,
+				2581772D275664E3000A0888 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 258176F8275664DC000A0888 /* Project object */;
+}
