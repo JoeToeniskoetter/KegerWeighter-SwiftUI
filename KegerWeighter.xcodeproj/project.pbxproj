@@ -3,17 +3,70 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		25565DF327677FD500F7D80E /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 25565DF227677FD500F7D80E /* SwiftUICharts */; };
+		25565DF5276780C800F7D80E /* TrendsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25565DF4276780C800F7D80E /* TrendsView.swift */; };
+		25565DF72768F99500F7D80E /* KegService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25565DF62768F99500F7D80E /* KegService.swift */; };
+		255D512C2757DF0D00E05AB3 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 255D512B2757DF0D00E05AB3 /* GoogleSignIn */; };
+		255D512F2759713700E05AB3 /* KegPercentageCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255D512E2759713600E05AB3 /* KegPercentageCircle.swift */; };
+		2565EAA627698D21007ED5AE /* ResetKegView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2565EAA527698D21007ED5AE /* ResetKegView.swift */; };
+		2565EAA9276A1FCE007ED5AE /* Resolver in Frameworks */ = {isa = PBXBuildFile; productRef = 2565EAA8276A1FCE007ED5AE /* Resolver */; };
+		2565EAAB276A201E007ED5AE /* KegerWeighterApp+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2565EAAA276A201E007ED5AE /* KegerWeighterApp+Injection.swift */; };
+		2565EAAD276A2292007ED5AE /* FirestoreKegRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2565EAAC276A2292007ED5AE /* FirestoreKegRepository.swift */; };
 		25817704275664DD000A0888 /* KegerWeighterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25817703275664DD000A0888 /* KegerWeighterApp.swift */; };
 		25817706275664DD000A0888 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25817705275664DD000A0888 /* ContentView.swift */; };
 		25817708275664E2000A0888 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25817707275664E2000A0888 /* Assets.xcassets */; };
 		2581770B275664E2000A0888 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2581770A275664E2000A0888 /* Preview Assets.xcassets */; };
 		25817716275664E3000A0888 /* KegerWeighterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25817715275664E3000A0888 /* KegerWeighterTests.swift */; };
 		25817721275664E3000A0888 /* KegerWeighterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25817720275664E3000A0888 /* KegerWeighterUITests.swift */; };
+		2581772F2756652A000A0888 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2581772E2756652A000A0888 /* GoogleService-Info.plist */; };
+		258177342756658D000A0888 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258177332756658D000A0888 /* AuthView.swift */; };
+		2581773727567EA6000A0888 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 2581773627567EA6000A0888 /* FirebaseAuth */; };
+		2581773927567EA6000A0888 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 2581773827567EA6000A0888 /* FirebaseFirestore */; };
+		2581773B27567EA6000A0888 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 2581773A27567EA6000A0888 /* FirebaseMessaging */; };
+		2581773E27567ED7000A0888 /* SessionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2581773D27567ED7000A0888 /* SessionStore.swift */; };
+		2581774027568590000A0888 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2581773F2756858F000A0888 /* AuthViewModel.swift */; };
+		2581774227569556000A0888 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2581774127569556000A0888 /* DashboardView.swift */; };
+		25817744275695A7000A0888 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25817743275695A7000A0888 /* DashboardViewModel.swift */; };
+		258177482756A32B000A0888 /* SignInWithAppleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258177472756A32B000A0888 /* SignInWithAppleService.swift */; };
+		2584B262276B6DA7007BDFD5 /* FirestoreUserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2584B261276B6DA7007BDFD5 /* FirestoreUserRepository.swift */; };
+		2584B265276B7DDC007BDFD5 /* BottomSheet in Frameworks */ = {isa = PBXBuildFile; productRef = 2584B264276B7DDC007BDFD5 /* BottomSheet */; };
+		2584B267276B9371007BDFD5 /* FirebaseUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2584B266276B9371007BDFD5 /* FirebaseUser.swift */; };
+		2584B269276BB938007BDFD5 /* NoKegsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2584B268276BB938007BDFD5 /* NoKegsView.swift */; };
+		25A21001275A616C00169ACC /* AddKegFloatingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A21000275A616C00169ACC /* AddKegFloatingButton.swift */; };
+		25A21003275A694000169ACC /* AddKegFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A21002275A694000169ACC /* AddKegFormView.swift */; };
+		25A21005275A7B5000169ACC /* KegDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A21004275A7B5000169ACC /* KegDetailView.swift */; };
+		25A7386E275EFB9A00DFF080 /* Keg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A7386D275EFB9A00DFF080 /* Keg.swift */; };
+		25A73871275F06F500DFF080 /* FirebaseFirestoreSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 25A73870275F06F500DFF080 /* FirebaseFirestoreSwift-Beta */; };
+		25A7387827601C8C00DFF080 /* KegViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A7387727601C8C00DFF080 /* KegViewModel.swift */; };
+		25A7387A276129D700DFF080 /* EditKegForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A73879276129D700DFF080 /* EditKegForm.swift */; };
+		25A7387C2761317A00DFF080 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A7387B2761317A00DFF080 /* SettingsView.swift */; };
+		25AB92C827615A24007B05DC /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AB92C727615A24007B05DC /* Settings.swift */; };
+		25AB92CA27615D28007B05DC /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AB92C927615D28007B05DC /* SettingsViewModel.swift */; };
+		25AB92CC27616933007B05DC /* SettingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AB92CB27616933007B05DC /* SettingsStore.swift */; };
+		25AB92CE2762AD45007B05DC /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AB92CD2762AD45007B05DC /* SplashScreenView.swift */; };
+		25AB92D22763AC13007B05DC /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25AB92D12763AC13007B05DC /* Launch Screen.storyboard */; };
+		25AB92D427650D9E007B05DC /* AddKegViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AB92D327650D9E007B05DC /* AddKegViewModel.swift */; };
+		25AB92D62765188C007B05DC /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = 25AB92D52765188C007B05DC /* FirebaseFunctions */; };
+		25C564FF275E70260095F250 /* KegCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C564FE275E70260095F250 /* KegCardView.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXBuildRule section */
+		255D512D2757FB6D00E05AB3 /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			fileType = pattern.proxy;
+			inputFiles = (
+			);
+			isEditable = 1;
+			outputFiles = (
+			);
+			script = "# Type a script or drag a script file from your workspace to insert its path.\n";
+		};
+/* End PBXBuildRule section */
 
 /* Begin PBXContainerItemProxy section */
 		25817712275664E3000A0888 /* PBXContainerItemProxy */ = {
@@ -33,6 +86,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		25565DF4276780C800F7D80E /* TrendsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendsView.swift; sourceTree = "<group>"; };
+		25565DF62768F99500F7D80E /* KegService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KegService.swift; sourceTree = "<group>"; };
+		255D512E2759713600E05AB3 /* KegPercentageCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KegPercentageCircle.swift; sourceTree = "<group>"; };
+		2565EAA527698D21007ED5AE /* ResetKegView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetKegView.swift; sourceTree = "<group>"; };
+		2565EAAA276A201E007ED5AE /* KegerWeighterApp+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KegerWeighterApp+Injection.swift"; sourceTree = "<group>"; };
+		2565EAAC276A2292007ED5AE /* FirestoreKegRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreKegRepository.swift; sourceTree = "<group>"; };
 		25817700275664DD000A0888 /* KegerWeighter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KegerWeighter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		25817703275664DD000A0888 /* KegerWeighterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KegerWeighterApp.swift; sourceTree = "<group>"; };
 		25817705275664DD000A0888 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -45,6 +104,31 @@
 		2581771C275664E3000A0888 /* KegerWeighterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KegerWeighterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		25817720275664E3000A0888 /* KegerWeighterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KegerWeighterUITests.swift; sourceTree = "<group>"; };
 		25817722275664E3000A0888 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2581772E2756652A000A0888 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		258177332756658D000A0888 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
+		2581773D27567ED7000A0888 /* SessionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionStore.swift; sourceTree = "<group>"; };
+		2581773F2756858F000A0888 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		2581774127569556000A0888 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		25817743275695A7000A0888 /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
+		2581774527569E5F000A0888 /* KegerWeighter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KegerWeighter.entitlements; sourceTree = "<group>"; };
+		258177472756A32B000A0888 /* SignInWithAppleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithAppleService.swift; sourceTree = "<group>"; };
+		2584B261276B6DA7007BDFD5 /* FirestoreUserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreUserRepository.swift; sourceTree = "<group>"; };
+		2584B266276B9371007BDFD5 /* FirebaseUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseUser.swift; sourceTree = "<group>"; };
+		2584B268276BB938007BDFD5 /* NoKegsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoKegsView.swift; sourceTree = "<group>"; };
+		25A21000275A616C00169ACC /* AddKegFloatingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddKegFloatingButton.swift; sourceTree = "<group>"; };
+		25A21002275A694000169ACC /* AddKegFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddKegFormView.swift; sourceTree = "<group>"; };
+		25A21004275A7B5000169ACC /* KegDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KegDetailView.swift; sourceTree = "<group>"; };
+		25A7386D275EFB9A00DFF080 /* Keg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keg.swift; sourceTree = "<group>"; };
+		25A7387727601C8C00DFF080 /* KegViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KegViewModel.swift; sourceTree = "<group>"; };
+		25A73879276129D700DFF080 /* EditKegForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditKegForm.swift; sourceTree = "<group>"; };
+		25A7387B2761317A00DFF080 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		25AB92C727615A24007B05DC /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		25AB92C927615D28007B05DC /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		25AB92CB27616933007B05DC /* SettingsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStore.swift; sourceTree = "<group>"; };
+		25AB92CD2762AD45007B05DC /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
+		25AB92D12763AC13007B05DC /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		25AB92D327650D9E007B05DC /* AddKegViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddKegViewModel.swift; sourceTree = "<group>"; };
+		25C564FE275E70260095F250 /* KegCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KegCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +136,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2581773B27567EA6000A0888 /* FirebaseMessaging in Frameworks */,
+				2584B265276B7DDC007BDFD5 /* BottomSheet in Frameworks */,
+				25565DF327677FD500F7D80E /* SwiftUICharts in Frameworks */,
+				2565EAA9276A1FCE007ED5AE /* Resolver in Frameworks */,
+				255D512C2757DF0D00E05AB3 /* GoogleSignIn in Frameworks */,
+				25A73871275F06F500DFF080 /* FirebaseFirestoreSwift-Beta in Frameworks */,
+				25AB92D62765188C007B05DC /* FirebaseFunctions in Frameworks */,
+				2581773727567EA6000A0888 /* FirebaseAuth in Frameworks */,
+				2581773927567EA6000A0888 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +172,7 @@
 				25817714275664E3000A0888 /* KegerWeighterTests */,
 				2581771F275664E3000A0888 /* KegerWeighterUITests */,
 				25817701275664DD000A0888 /* Products */,
+				25A7386F275F06F500DFF080 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -95,11 +189,22 @@
 		25817702275664DD000A0888 /* KegerWeighter */ = {
 			isa = PBXGroup;
 			children = (
+				2584B25E276AE08E007BDFD5 /* Util */,
+				25A73872275FB1B700DFF080 /* Repositories */,
+				258177462756A318000A0888 /* Services */,
+				2581774527569E5F000A0888 /* KegerWeighter.entitlements */,
+				2581773C27567EC0000A0888 /* EnvironmentObjects */,
+				2581773227566578000A0888 /* Models */,
+				258177312756656B000A0888 /* ViewModels */,
+				2581773027566564000A0888 /* Views */,
+				2581772E2756652A000A0888 /* GoogleService-Info.plist */,
 				25817703275664DD000A0888 /* KegerWeighterApp.swift */,
 				25817705275664DD000A0888 /* ContentView.swift */,
 				25817707275664E2000A0888 /* Assets.xcassets */,
 				2581770C275664E2000A0888 /* Info.plist */,
 				25817709275664E2000A0888 /* Preview Content */,
+				25AB92D12763AC13007B05DC /* Launch Screen.storyboard */,
+				2565EAAA276A201E007ED5AE /* KegerWeighterApp+Injection.swift */,
 			);
 			path = KegerWeighter;
 			sourceTree = "<group>";
@@ -130,6 +235,89 @@
 			path = KegerWeighterUITests;
 			sourceTree = "<group>";
 		};
+		2581773027566564000A0888 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				258177332756658D000A0888 /* AuthView.swift */,
+				2581774127569556000A0888 /* DashboardView.swift */,
+				255D512E2759713600E05AB3 /* KegPercentageCircle.swift */,
+				25A21000275A616C00169ACC /* AddKegFloatingButton.swift */,
+				25A21002275A694000169ACC /* AddKegFormView.swift */,
+				25A21004275A7B5000169ACC /* KegDetailView.swift */,
+				25C564FE275E70260095F250 /* KegCardView.swift */,
+				25A73879276129D700DFF080 /* EditKegForm.swift */,
+				25A7387B2761317A00DFF080 /* SettingsView.swift */,
+				25AB92CD2762AD45007B05DC /* SplashScreenView.swift */,
+				25565DF4276780C800F7D80E /* TrendsView.swift */,
+				2565EAA527698D21007ED5AE /* ResetKegView.swift */,
+				2584B268276BB938007BDFD5 /* NoKegsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		258177312756656B000A0888 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				2581773F2756858F000A0888 /* AuthViewModel.swift */,
+				25817743275695A7000A0888 /* DashboardViewModel.swift */,
+				25A7387727601C8C00DFF080 /* KegViewModel.swift */,
+				25AB92C927615D28007B05DC /* SettingsViewModel.swift */,
+				25AB92D327650D9E007B05DC /* AddKegViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		2581773227566578000A0888 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				25A7386D275EFB9A00DFF080 /* Keg.swift */,
+				25AB92C727615A24007B05DC /* Settings.swift */,
+				2584B266276B9371007BDFD5 /* FirebaseUser.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2581773C27567EC0000A0888 /* EnvironmentObjects */ = {
+			isa = PBXGroup;
+			children = (
+				2581773D27567ED7000A0888 /* SessionStore.swift */,
+				25AB92CB27616933007B05DC /* SettingsStore.swift */,
+			);
+			path = EnvironmentObjects;
+			sourceTree = "<group>";
+		};
+		258177462756A318000A0888 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				258177472756A32B000A0888 /* SignInWithAppleService.swift */,
+				25565DF62768F99500F7D80E /* KegService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		2584B25E276AE08E007BDFD5 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		25A7386F275F06F500DFF080 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		25A73872275FB1B700DFF080 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				2565EAAC276A2292007ED5AE /* FirestoreKegRepository.swift */,
+				2584B261276B6DA7007BDFD5 /* FirestoreUserRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -142,10 +330,22 @@
 				258176FE275664DC000A0888 /* Resources */,
 			);
 			buildRules = (
+				255D512D2757FB6D00E05AB3 /* PBXBuildRule */,
 			);
 			dependencies = (
 			);
 			name = KegerWeighter;
+			packageProductDependencies = (
+				2581773627567EA6000A0888 /* FirebaseAuth */,
+				2581773827567EA6000A0888 /* FirebaseFirestore */,
+				2581773A27567EA6000A0888 /* FirebaseMessaging */,
+				255D512B2757DF0D00E05AB3 /* GoogleSignIn */,
+				25A73870275F06F500DFF080 /* FirebaseFirestoreSwift-Beta */,
+				25AB92D52765188C007B05DC /* FirebaseFunctions */,
+				25565DF227677FD500F7D80E /* SwiftUICharts */,
+				2565EAA8276A1FCE007ED5AE /* Resolver */,
+				2584B264276B7DDC007BDFD5 /* BottomSheet */,
+			);
 			productName = KegerWeighter;
 			productReference = 25817700275664DD000A0888 /* KegerWeighter.app */;
 			productType = "com.apple.product-type.application";
@@ -217,6 +417,13 @@
 				Base,
 			);
 			mainGroup = 258176F7275664DC000A0888;
+			packageReferences = (
+				2581773527567EA5000A0888 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				255D512A2757DF0C00E05AB3 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+				25565DF127677FD400F7D80E /* XCRemoteSwiftPackageReference "ChartView" */,
+				2565EAA7276A1FCD007ED5AE /* XCRemoteSwiftPackageReference "Resolver" */,
+				2584B263276B7DDB007BDFD5 /* XCRemoteSwiftPackageReference "bottom-sheet" */,
+			);
 			productRefGroup = 25817701275664DD000A0888 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -234,6 +441,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2581770B275664E2000A0888 /* Preview Assets.xcassets in Resources */,
+				2581772F2756652A000A0888 /* GoogleService-Info.plist in Resources */,
+				25AB92D22763AC13007B05DC /* Launch Screen.storyboard in Resources */,
 				25817708275664E2000A0888 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,8 +468,36 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2584B267276B9371007BDFD5 /* FirebaseUser.swift in Sources */,
+				2581774027568590000A0888 /* AuthViewModel.swift in Sources */,
+				2565EAA627698D21007ED5AE /* ResetKegView.swift in Sources */,
+				25A7386E275EFB9A00DFF080 /* Keg.swift in Sources */,
+				2581774227569556000A0888 /* DashboardView.swift in Sources */,
 				25817706275664DD000A0888 /* ContentView.swift in Sources */,
+				25AB92D427650D9E007B05DC /* AddKegViewModel.swift in Sources */,
+				25C564FF275E70260095F250 /* KegCardView.swift in Sources */,
+				25A21005275A7B5000169ACC /* KegDetailView.swift in Sources */,
+				25AB92CE2762AD45007B05DC /* SplashScreenView.swift in Sources */,
 				25817704275664DD000A0888 /* KegerWeighterApp.swift in Sources */,
+				2581773E27567ED7000A0888 /* SessionStore.swift in Sources */,
+				25AB92CC27616933007B05DC /* SettingsStore.swift in Sources */,
+				258177342756658D000A0888 /* AuthView.swift in Sources */,
+				25A7387A276129D700DFF080 /* EditKegForm.swift in Sources */,
+				2584B262276B6DA7007BDFD5 /* FirestoreUserRepository.swift in Sources */,
+				25565DF5276780C800F7D80E /* TrendsView.swift in Sources */,
+				25A21003275A694000169ACC /* AddKegFormView.swift in Sources */,
+				25A7387827601C8C00DFF080 /* KegViewModel.swift in Sources */,
+				25AB92C827615A24007B05DC /* Settings.swift in Sources */,
+				258177482756A32B000A0888 /* SignInWithAppleService.swift in Sources */,
+				25A21001275A616C00169ACC /* AddKegFloatingButton.swift in Sources */,
+				2565EAAD276A2292007ED5AE /* FirestoreKegRepository.swift in Sources */,
+				2565EAAB276A201E007ED5AE /* KegerWeighterApp+Injection.swift in Sources */,
+				25565DF72768F99500F7D80E /* KegService.swift in Sources */,
+				255D512F2759713700E05AB3 /* KegPercentageCircle.swift in Sources */,
+				25817744275695A7000A0888 /* DashboardViewModel.swift in Sources */,
+				25A7387C2761317A00DFF080 /* SettingsView.swift in Sources */,
+				25AB92CA27615D28007B05DC /* SettingsViewModel.swift in Sources */,
+				2584B269276BB938007BDFD5 /* NoKegsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,6 +654,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = KegerWeighter/KegerWeighter.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"KegerWeighter/Preview Content\"";
 				DEVELOPMENT_TEAM = PYGD6FCN62;
@@ -427,7 +665,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.JoeToeniskoetter.KegerWeighter;
+				PRODUCT_BUNDLE_IDENTIFIER = com.thekegerweighter.kegerweighter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -439,6 +677,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = KegerWeighter/KegerWeighter.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"KegerWeighter/Preview Content\"";
 				DEVELOPMENT_TEAM = PYGD6FCN62;
@@ -449,7 +688,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.JoeToeniskoetter.KegerWeighter;
+				PRODUCT_BUNDLE_IDENTIFIER = com.thekegerweighter.kegerweighter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -580,6 +819,97 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		25565DF127677FD400F7D80E /* XCRemoteSwiftPackageReference "ChartView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AppPear/ChartView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		255D512A2757DF0C00E05AB3 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+		2565EAA7276A1FCD007ED5AE /* XCRemoteSwiftPackageReference "Resolver" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hmlongco/Resolver.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		2581773527567EA5000A0888 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.9.1;
+			};
+		};
+		2584B263276B7DDB007BDFD5 /* XCRemoteSwiftPackageReference "bottom-sheet" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/weitieda/bottom-sheet";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		25565DF227677FD500F7D80E /* SwiftUICharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 25565DF127677FD400F7D80E /* XCRemoteSwiftPackageReference "ChartView" */;
+			productName = SwiftUICharts;
+		};
+		255D512B2757DF0D00E05AB3 /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 255D512A2757DF0C00E05AB3 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+		2565EAA8276A1FCE007ED5AE /* Resolver */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2565EAA7276A1FCD007ED5AE /* XCRemoteSwiftPackageReference "Resolver" */;
+			productName = Resolver;
+		};
+		2581773627567EA6000A0888 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2581773527567EA5000A0888 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		2581773827567EA6000A0888 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2581773527567EA5000A0888 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		2581773A27567EA6000A0888 /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2581773527567EA5000A0888 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
+		2584B264276B7DDC007BDFD5 /* BottomSheet */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2584B263276B7DDB007BDFD5 /* XCRemoteSwiftPackageReference "bottom-sheet" */;
+			productName = BottomSheet;
+		};
+		25A73870275F06F500DFF080 /* FirebaseFirestoreSwift-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2581773527567EA5000A0888 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseFirestoreSwift-Beta";
+		};
+		25AB92D52765188C007B05DC /* FirebaseFunctions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2581773527567EA5000A0888 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFunctions;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 258176F8275664DC000A0888 /* Project object */;
 }
