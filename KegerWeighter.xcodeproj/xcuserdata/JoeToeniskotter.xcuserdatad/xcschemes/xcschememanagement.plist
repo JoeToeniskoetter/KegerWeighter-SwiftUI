@@ -7,7 +7,7 @@
 		<key>KegerWeighter.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>29</integer>
 		</dict>
 		<key>Promises (Playground) 1.xcscheme</key>
 		<dict>
@@ -50,6 +50,24 @@
 			<false/>
 			<key>orderHint</key>
 			<integer>2</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>258176FF275664DC000A0888</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>25817710275664E3000A0888</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2581771B275664E3000A0888</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

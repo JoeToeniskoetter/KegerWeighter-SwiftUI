@@ -9,16 +9,15 @@ import SwiftUI
 
 struct NoKegsView: View {
     var body: some View {
-        NavigationView{
         VStack{
-            Text("No Kegs. Add one here")
-                .font(.title)
             Image("main_logo_transparent")
                 .renderingMode(.original)
                 .resizable()
                 .frame(width:150, height:150)
-            
-        }
+                .opacity(0.3)
+            Text("No Kegs. Add one here")
+                .font(.body)
+                .foregroundColor(Color.gray)
         }
     }
 }

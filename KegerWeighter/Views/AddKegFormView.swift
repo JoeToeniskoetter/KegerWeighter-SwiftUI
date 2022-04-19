@@ -10,6 +10,7 @@ import SwiftUI
 struct AddKegFormView: View {
     @Environment(\.presentationMode) var presentationMode
     @StateObject var viewModel = AddKegViewModel()
+    private let userNotifications = UserNotificationService()
     
     var body: some View {
         NavigationView{
@@ -26,7 +27,8 @@ struct AddKegFormView: View {
                     
                 }
                 Section(header: Text("NOTIFICATIONS")) {
-                    Toggle(isOn: self.$viewModel.notificationsEnabled.animation()) {
+                    Toggle(isOn:
+                            self.$viewModel.notificationsEnabled.animation()) {
                         Text("Notify Me When This Keg is Low")
                     }
                 }

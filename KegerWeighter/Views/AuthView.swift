@@ -84,7 +84,8 @@ struct AuthView: View {
                                 withAnimation{
                                     self.signIn.toggle()
                                 }
-                            }
+                            }.padding()
+                            NavigationLink("Forgot Password?", destination:ResetPasswordView())
                             Spacer()
                         }.padding(.horizontal,10)
                     }

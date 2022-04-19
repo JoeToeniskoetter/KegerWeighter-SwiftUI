@@ -10,20 +10,6 @@ import SwiftUI
 struct AddKegFloatingButton: View {
     @State private var showFullScreenModal:Bool = false
     @StateObject var viewModel = DashboardViewModel()
-    @State var isAtMaxScale = false
-    @State var shouldAnimate:Bool = false
-    private var cancellables = Set<AnyCancellable>()
-    private let animation = Animation.easeInOut(duration: 1)
-    private let maxScale: CGFloat = 1.05
-    
-    init(){
-        viewModel.$kegViewModels.compactMap { kvm in
-            kvm.count() < 1
-        }
-        .assign(to: \.shouldAnimate, on: self)
-        .store(in: &cancellables)
-        
-    }
     
     var body: some View {
         VStack {
@@ -35,9 +21,9 @@ struct AddKegFloatingButton: View {
                 }, label: {
                     HStack{
                         Group{
-                        Image(systemName: "plus")
+                            Image(systemName: "plus")
                                 .font(Font.title.weight(.bold))
-                        Text("Add a Keg")
+                            Text("Add a Keg")
                                 .fontWeight(.bold)
                         }
                         .foregroundColor(Color.white)
@@ -47,14 +33,12 @@ struct AddKegFloatingButton: View {
                         .padding()
                 }).buttonStyle(FloatingButtonStyle())
                     .sheet(isPresented:$showFullScreenModal) {
-                        
                     } content: {
                         AddKegFormView()
                     }
-
+                
             }
-        }.scaleEffect(shouldAnimate ? maxScale : 1)
-            .animation(Animation.default.repeat(while: shouldAnimate < 1))
+        }
     }
 }
 
@@ -74,11 +58,11 @@ struct FloatingButtonStyle: ButtonStyle {
     }
 }
 
-struct AddKegFloatingButton_Previews: PreviewProvider {
-    static var previews: some View {
-        AddKegFloatingButton()
-    }
-}
+//struct AddKegFloatingButton_Previews: PreviewProvider {
+//    static var previews: some View {
+//        AddKegFloatingButton(stopAnimation: true)
+//    }
+//}
 
 
 extension Animation {

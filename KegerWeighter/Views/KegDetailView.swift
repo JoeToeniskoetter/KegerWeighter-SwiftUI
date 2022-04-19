@@ -13,7 +13,7 @@ struct KegDetailView: View {
     @Environment(\.presentationMode) var presentationMode
     @EnvironmentObject var settingsStore:SettingsStore
     @StateObject var keg: KegViewModel
-    @State private var selectedColorIndex = 0
+    @State private var index = 0
     @State private var animatedBeers = 0
     @State private var oldBeersLeft = 0
     @State private var textColor: Color = Color.black
@@ -53,9 +53,10 @@ struct KegDetailView: View {
                     }.frame(width:UIScreen.main.bounds.width)
                     
                     HStack{
+                        Spacer()
                         VStack{
-                            Text(self.keg.beerType).foregroundColor(.white).font(.largeTitle).fontWeight(.bold)
-                            Text(self.keg.location + " - " + self.keg.kegSize.rawValue).foregroundColor(.white).font(.subheadline)
+                            Text(self.keg.beerType).foregroundColor(.white).font(.system(size:50)).fontWeight(.bold)
+                            Text(self.keg.location + " - " + self.keg.kegSize.rawValue).foregroundColor(.white).font(.system(size:20))
                         }.padding()
                         Spacer()
                     }.frame(width:UIScreen.main.bounds.width)
@@ -69,7 +70,8 @@ struct KegDetailView: View {
                             VStack{
                                 Group{
                                     Text(String(self.animatedBeers))
-                                        .font(.title)
+                                        .font(.system(size:40))
+                                        .bold()
                                         .foregroundColor(self.textColor)
                                         .onAppear(perform:{
                                             self.updateOldBeers()
@@ -83,7 +85,8 @@ struct KegDetailView: View {
                             Spacer()
                             VStack{
                                 Text(self.calcTemperature())
-                                    .font(.title)
+                                    .font(.system(size:40))
+                                    .bold()
                                 Text("Degrees")
                                     .font(.subheadline)
                             }
@@ -100,68 +103,7 @@ struct KegDetailView: View {
                     .ignoresSafeArea(.all, edges: .bottom)
                     .frame(height: UIScreen.main.bounds.height * 0.75)
                 VStack {
-                    HStack{
-                        HStack{
-                            Image(systemName:"arrowtriangle.up.fill").foregroundColor(.green)
-                            Text(String(self.keg.beersToday))
-                                .font(.largeTitle)
-                                .fontWeight(.bold)
-                            VStack{
-                                Text("Beers")
-                                Text("Today")
-                            }
-                        }
-                        .frame(width:UIScreen.main.bounds.width * 0.3).onTapGesture(perform: {
-                            withAnimation {
-                                self.selectedColorIndex = 0
-                            }
-                        })
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 10.0).fill(.gray.opacity(self.selectedColorIndex == 0 ? 0.2 : 0.0))
-                        )
-                        Spacer()
-                        HStack{
-                            Image(systemName:"arrowtriangle.down.fill")
-                                .foregroundColor(.red)
-                            Text(String(self.keg.beersThisWeek))
-                                .font(.largeTitle)
-                                .fontWeight(.bold)
-                            VStack{
-                                Text("This")
-                                Text("Week")
-                            }
-                        }.frame(width:UIScreen.main.bounds.width * 0.3)
-                            .onTapGesture(perform: {
-                                withAnimation {
-                                    self.selectedColorIndex = 1
-                                }
-                                
-                            })
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 10.0).fill(.gray.opacity(self.selectedColorIndex == 1 ? 0.2 : 0.0))
-                            )
-                        Spacer()
-                        HStack{
-                            Image(systemName:"arrowtriangle.up.fill")
-                                .foregroundColor(.green)
-                            Text(String(self.keg.beersThisMonth))
-                                .font(.largeTitle)
-                                .fontWeight(.bold)
-                            VStack{
-                                Text("This")
-                                Text("Month")
-                            }
-                        }.frame(width:UIScreen.main.bounds.width * 0.3)
-                            .onTapGesture(perform: {
-                                withAnimation {
-                                    self.selectedColorIndex = 2
-                                }
-                            })
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 10.0).fill(.gray.opacity(self.selectedColorIndex == 2 ? 0.2 : 0.0))
-                            )
-                    }
-                    .padding(.top, 30)
+                    TrendCellsView(index:self.$index, keg:self.keg, updateIndex:updateIndex)
                     LineView(
                         data: self.getChartData(),
                         title: self.getChartTitle(),
@@ -180,25 +122,34 @@ struct KegDetailView: View {
             }.onAppear(perform: {
                 self.checkForNewKeg()
             })
+                .onChange(of: self.keg.potentialNewKeg, perform: { newValue in
+                    self.showResetKegSheet = newValue
+                })
         } .bottomSheet(
             isPresented: self.$showResetKegSheet,
-            height: 300,
-            topBarHeight: 16,
-            topBarCornerRadius: 16,
+            height: 400,
+            topBarHeight: 20,
+            topBarCornerRadius: 45,
             showTopIndicator: true
         ) {
-                ResetKegView()
-            }
-            .sheet(isPresented: self.$showEditForm) {
-                
-            } content: {
-                EditKegFormView(kegViewModel: self.keg)
-            }
+            ResetKegView(vm: self.keg, loading: self.$keg.loading)
+        }
+        .sheet(isPresented: self.$showEditForm) {
+            
+        } content: {
+            EditKegFormView(kegViewModel: self.keg)
+        }
     }
     
     func checkForNewKeg(){
         if self.keg.potentialNewKeg{
             self.showResetKegSheet=true
+        }
+    }
+    
+    func updateIndex(newIndex:Int){
+        withAnimation{
+            self.index = newIndex
         }
     }
     
@@ -221,11 +172,11 @@ struct KegDetailView: View {
     }
     
     func getChartTitle()-> String{
-        if self.selectedColorIndex == 0 {
+        if self.index == 0 {
             return "Daily Beers"
         }
         
-        if self.selectedColorIndex == 1 {
+        if self.index == 1 {
             return "Weekly Beers"
         }
         
@@ -233,11 +184,11 @@ struct KegDetailView: View {
     }
     
     func getChartData()->[Double] {
-        if self.selectedColorIndex == 0 {
+        if self.index == 0 {
             return self.keg.beersDailyArray
         }
         
-        if self.selectedColorIndex == 1 {
+        if self.index == 1 {
             return self.keg.beersWeeklyArray
         }
         
@@ -301,6 +252,123 @@ struct KegDetailView: View {
 }
 
 
+struct TrendCellsView: View {
+    @Binding var index: Int
+    @ObservedObject var keg: KegViewModel
+    var updateIndex: (_ newIndex:Int) -> Void
+    
+    var sections = [
+        [
+            "title":"Beers",
+            "subTitle":"Today"
+        ],
+        [
+            "title":"This",
+            "subTitle":"Week"
+        ],
+        [
+            "title":"This",
+            "subTitle":"Month"
+        ]
+    ]
+    
+    var body: some View{
+        HStack{
+            ForEach(0..<sections.count) { i in
+                HStack{
+                    Image(systemName:self.getTrendImage(data: self.getDataArray(index: i)))
+                        .foregroundColor(self.getTrendImageColor(data: self.getDataArray(index: i)))
+                    Text(String(format: "%.0f", self.getBeers(index: i)))
+                        .font(.system(size: 30.0))
+                        .fontWeight(.bold)
+                    VStack{
+                        Text(sections[i]["title"]!)
+                        Text(sections[i]["subTitle"]!)
+                    }
+                    
+                }
+                .frame(width:UIScreen.main.bounds.width * 0.30, height:80)
+                .onTapGesture(perform: {
+                    self.updateIndex(i)
+                })
+                .overlay(
+                    RoundedRectangle(cornerRadius: 15.0).fill(.gray.opacity(self.index == i ? 0.2 : 0.0))
+                )
+                if i < sections.count {
+                    Spacer()
+                }
+            }
+        }
+    }
+    
+    func getDataArray(index:Int)->[Double]{
+        if index == 0 {
+            return self.keg.beersDailyArray
+        }
+        if index == 1 {
+            return self.keg.beersWeeklyArray
+        }
+        return self.keg.beersMonthlyArray
+    }
+    
+    func getBeers(index:Int) -> Double{
+        if index == 0 {
+            return self.keg.beersDailyArray[0]
+        }
+        if index == 1 {
+            return self.keg.beersWeeklyArray[0]
+        }
+        return self.keg.beersMonthlyArray[0]
+    }
+    
+    func getTrendImage(data: [Double])->String{
+        if data.count < 2{
+            return "arrowtriangle.up.fill"
+        }
+        
+        if data[0] < data[1]{
+            return "arrowtriangle.down.fill"
+        }
+        
+        if data[0] > data[1]{
+            return "arrowtriangle.up.fill"
+        }
+        
+        return "rectangle.fill"
+    }
+    
+    func getTrendImageColor(data:[Double])->Color{
+        if data.count < 2{
+            return .green
+        }
+        
+        if data[0] < data[1]{
+            return .red
+        }
+        
+        if data[0] > data[1]{
+            return .green
+        }
+        
+        return .gray
+    }
+}
+
+struct UpOrDownArrow:View{
+    var arr: [Double]
+    var body: some View{
+        if(arr.count < 2){
+            Image(systemName: "rectangle.fill").foregroundColor(.black)
+        }else if arr[0] > arr[1]{
+            Image(systemName:"arrowtriangle.up.fill").foregroundColor(.green)
+        }else{
+            Image(systemName:"arrowtriangle.down.fill").foregroundColor(.red)
+        }
+    }
+}
+
+
+
 struct NavigationConfigurator: UIViewControllerRepresentable {
     var configure: (UINavigationController) -> Void = { _ in }
     
@@ -319,6 +387,7 @@ struct KegDetailView_Previews: PreviewProvider {
     static var previews: some View {
         KegDetailView(keg: KegViewModel(keg: Keg(
             beerType: "Bud Select",
+            online:true,
             location: "Basement 2",
             kegSize: .halfBarrel,
             firstNotificationPerc: 0,
@@ -332,23 +401,23 @@ struct KegDetailView_Previews: PreviewProvider {
                 temp: 30,
                 beersToday:0,
                 beersDaily: [
-                    "12/13/2021":1,
+                    "12/13/2021":10,
                     "12/14/2021":0,
                     "12/15/2021":0,
                     "12/16/2021":10
                 ],
-                beersDailyArray: [3,4,5,6,7],
+                beersDailyArray: [10,4,5,6,7],
                 beersThisWeek: 0,
                 beersWeekly: [:],
-                beersWeeklyArray: [0,0,0,0,0],
+                beersWeeklyArray: [10,12,0,0,0],
                 beersThisMonth: 0,
                 beersMonthly: [:],
-                beersMonthlyArray:[0,0,0,0,0],
+                beersMonthlyArray:[10,10,0,0,0],
                 firstNotificationSent: false,
                 secondNotificationSent: false
             ),
             createdAt:0,
-            potentialNewKeg: false
+            potentialNewKeg: true
         )))
             .environmentObject(SettingsStore())
     }
@@ -356,6 +425,8 @@ struct KegDetailView_Previews: PreviewProvider {
 
 
 struct RoundedRectangleButtonStyle: ButtonStyle {
+    var backgroundColor: Color
+    
     func makeBody(configuration: Configuration) -> some View {
         HStack {
             Spacer()
@@ -363,7 +434,7 @@ struct RoundedRectangleButtonStyle: ButtonStyle {
             Spacer()
         }
         .padding()
-        .background(Color.red.cornerRadius(8))
+        .background(self.backgroundColor.cornerRadius(8))
         .scaleEffect(configuration.isPressed ? 0.95 : 1)
     }
 }

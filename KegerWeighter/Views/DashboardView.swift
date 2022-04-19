@@ -17,6 +17,7 @@ struct DashboardView: View {
     @StateObject var dashboardViewModel = DashboardViewModel()
     @State private var showActionSheet = false
     @StateObject var authViewModel = AuthViewModel()
+    @State private var animateButton:Bool = false
     
     var body: some View {
         NavigationView{
@@ -42,7 +43,18 @@ struct DashboardView: View {
                             Image(systemName:"gear")
                         }
                     }
-                AddKegFloatingButton()
+                
+                if self.dashboardViewModel.kegViewModels.count > 0{
+                    AddKegFloatingButton()
+                }else{
+                    AddKegFloatingButton().scaleEffect(animateButton ? 1.08 : 1)
+                        .onAppear {
+                            withAnimation(.easeInOut(duration: 1).repeatForever(autoreverses: true)) {
+                                self.animateButton.toggle()
+                            }
+                        }
+                }
+                
             }
         }.onAppear(perform: {
             self.dashboardViewModel.fetchKegs()

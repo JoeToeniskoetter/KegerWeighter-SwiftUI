@@ -14,6 +14,7 @@ class KegViewModel: ObservableObject, Identifiable {
           
     @Published var _id: String = ""
     @Published var beerType:String = ""
+    @Published var online:Bool = false
     @Published var location: String = ""
     @Published var percLeft: Float = 0.0
     @Published var beersLeft: Int = 0
@@ -37,6 +38,8 @@ class KegViewModel: ObservableObject, Identifiable {
     @Published var firstNotificationSent: Bool = false
     @Published var secondNotificationSent: Bool = false
     @Published var potentialNewKeg: Bool = false
+    @Published var loading: Bool = false
+    
     
     var id:String {self._id}
     
@@ -44,6 +47,7 @@ class KegViewModel: ObservableObject, Identifiable {
         
         self._id = keg.getID()
         self.beerType = keg.beerType
+        self.online = keg.online
         self.location = keg.location
         self.percLeft = keg.data.percLeft
         self.beersLeft = keg.data.beersLeft
@@ -69,10 +73,13 @@ class KegViewModel: ObservableObject, Identifiable {
         
     
     }
+
     
     func toModel()-> Keg{
         return Keg(
+            id: self._id,
             beerType: self.beerType,
+            online: self.online,
             location: self.location,
             kegSize: self.kegSize,
             firstNotificationPerc: self.firstNotificationPerc,
@@ -118,6 +125,12 @@ class KegViewModel: ObservableObject, Identifiable {
 //                }
         
         self.kegRepository.updateKeg(keg: self.toModel(), id: self._id, completion: completion)
+    }
+    
+    func reset(clearData:Bool, completion: @escaping (_ success: Bool) -> Void){
+        self.loading = true
+        self.kegRepository.resetKeg(keg: self.toModel(), clearData: clearData, completion: completion)
+        self.loading = false
     }
 }
 

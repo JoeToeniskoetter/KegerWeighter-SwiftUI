@@ -68,6 +68,14 @@ class AuthViewModel: ObservableObject {
         self.errorMessage = ""
     }
     
+    func resetPasswordEmail(email:String, completion: @escaping (_ success: Bool) -> Void){
+        self.loading = true
+        Auth.auth().sendPasswordReset(withEmail: email, completion:{err in
+            self.loading = false
+            completion(false)
+        })
+    }
+    
     
     func handleGoogleSignIn(){
         self.loading = true

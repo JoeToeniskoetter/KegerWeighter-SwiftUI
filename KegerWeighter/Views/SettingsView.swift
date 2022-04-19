@@ -29,6 +29,10 @@ struct SettingsView: View {
                 self.settingsStore.updateTemp()
             })
             Section(header: Text("Account")){
+                HStack{
+                    Text("Email: ").foregroundColor(.gray)
+                    Text(viewModel.sessionStore.user?.email ?? "")
+                }
                 Button("Sign Out"){
                     self.viewModel.signOut()
                 }.foregroundColor(Color.red)

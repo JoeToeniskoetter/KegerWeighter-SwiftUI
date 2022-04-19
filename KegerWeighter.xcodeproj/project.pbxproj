@@ -7,15 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		25565DF327677FD500F7D80E /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 25565DF227677FD500F7D80E /* SwiftUICharts */; };
+		0688005FC8EFD654E2223471 /* Pods_KegerWeighter_KegerWeighterUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C1C3DE8E5A1EC7ABE7ABC53 /* Pods_KegerWeighter_KegerWeighterUITests.framework */; };
 		25565DF5276780C800F7D80E /* TrendsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25565DF4276780C800F7D80E /* TrendsView.swift */; };
 		25565DF72768F99500F7D80E /* KegService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25565DF62768F99500F7D80E /* KegService.swift */; };
-		255D512C2757DF0D00E05AB3 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 255D512B2757DF0D00E05AB3 /* GoogleSignIn */; };
 		255D512F2759713700E05AB3 /* KegPercentageCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 255D512E2759713600E05AB3 /* KegPercentageCircle.swift */; };
 		2565EAA627698D21007ED5AE /* ResetKegView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2565EAA527698D21007ED5AE /* ResetKegView.swift */; };
-		2565EAA9276A1FCE007ED5AE /* Resolver in Frameworks */ = {isa = PBXBuildFile; productRef = 2565EAA8276A1FCE007ED5AE /* Resolver */; };
 		2565EAAB276A201E007ED5AE /* KegerWeighterApp+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2565EAAA276A201E007ED5AE /* KegerWeighterApp+Injection.swift */; };
 		2565EAAD276A2292007ED5AE /* FirestoreKegRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2565EAAC276A2292007ED5AE /* FirestoreKegRepository.swift */; };
+		2577D965276C377300064752 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 2577D964276C377300064752 /* SwiftUICharts */; };
+		2577D9692782832D00064752 /* UserNotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2577D9682782832900064752 /* UserNotificationService.swift */; };
+		2577D96B27834F7800064752 /* ResetPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2577D96A27834F7600064752 /* ResetPasswordView.swift */; };
 		25817704275664DD000A0888 /* KegerWeighterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25817703275664DD000A0888 /* KegerWeighterApp.swift */; };
 		25817706275664DD000A0888 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25817705275664DD000A0888 /* ContentView.swift */; };
 		25817708275664E2000A0888 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25817707275664E2000A0888 /* Assets.xcassets */; };
@@ -24,23 +25,18 @@
 		25817721275664E3000A0888 /* KegerWeighterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25817720275664E3000A0888 /* KegerWeighterUITests.swift */; };
 		2581772F2756652A000A0888 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2581772E2756652A000A0888 /* GoogleService-Info.plist */; };
 		258177342756658D000A0888 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258177332756658D000A0888 /* AuthView.swift */; };
-		2581773727567EA6000A0888 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 2581773627567EA6000A0888 /* FirebaseAuth */; };
-		2581773927567EA6000A0888 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 2581773827567EA6000A0888 /* FirebaseFirestore */; };
-		2581773B27567EA6000A0888 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 2581773A27567EA6000A0888 /* FirebaseMessaging */; };
 		2581773E27567ED7000A0888 /* SessionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2581773D27567ED7000A0888 /* SessionStore.swift */; };
 		2581774027568590000A0888 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2581773F2756858F000A0888 /* AuthViewModel.swift */; };
 		2581774227569556000A0888 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2581774127569556000A0888 /* DashboardView.swift */; };
 		25817744275695A7000A0888 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25817743275695A7000A0888 /* DashboardViewModel.swift */; };
 		258177482756A32B000A0888 /* SignInWithAppleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 258177472756A32B000A0888 /* SignInWithAppleService.swift */; };
 		2584B262276B6DA7007BDFD5 /* FirestoreUserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2584B261276B6DA7007BDFD5 /* FirestoreUserRepository.swift */; };
-		2584B265276B7DDC007BDFD5 /* BottomSheet in Frameworks */ = {isa = PBXBuildFile; productRef = 2584B264276B7DDC007BDFD5 /* BottomSheet */; };
 		2584B267276B9371007BDFD5 /* FirebaseUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2584B266276B9371007BDFD5 /* FirebaseUser.swift */; };
 		2584B269276BB938007BDFD5 /* NoKegsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2584B268276BB938007BDFD5 /* NoKegsView.swift */; };
 		25A21001275A616C00169ACC /* AddKegFloatingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A21000275A616C00169ACC /* AddKegFloatingButton.swift */; };
 		25A21003275A694000169ACC /* AddKegFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A21002275A694000169ACC /* AddKegFormView.swift */; };
 		25A21005275A7B5000169ACC /* KegDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A21004275A7B5000169ACC /* KegDetailView.swift */; };
 		25A7386E275EFB9A00DFF080 /* Keg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A7386D275EFB9A00DFF080 /* Keg.swift */; };
-		25A73871275F06F500DFF080 /* FirebaseFirestoreSwift-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 25A73870275F06F500DFF080 /* FirebaseFirestoreSwift-Beta */; };
 		25A7387827601C8C00DFF080 /* KegViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A7387727601C8C00DFF080 /* KegViewModel.swift */; };
 		25A7387A276129D700DFF080 /* EditKegForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A73879276129D700DFF080 /* EditKegForm.swift */; };
 		25A7387C2761317A00DFF080 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A7387B2761317A00DFF080 /* SettingsView.swift */; };
@@ -50,8 +46,9 @@
 		25AB92CE2762AD45007B05DC /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AB92CD2762AD45007B05DC /* SplashScreenView.swift */; };
 		25AB92D22763AC13007B05DC /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25AB92D12763AC13007B05DC /* Launch Screen.storyboard */; };
 		25AB92D427650D9E007B05DC /* AddKegViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25AB92D327650D9E007B05DC /* AddKegViewModel.swift */; };
-		25AB92D62765188C007B05DC /* FirebaseFunctions in Frameworks */ = {isa = PBXBuildFile; productRef = 25AB92D52765188C007B05DC /* FirebaseFunctions */; };
 		25C564FF275E70260095F250 /* KegCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C564FE275E70260095F250 /* KegCardView.swift */; };
+		44E7CF1FABCE8EA083B5E9D8 /* Pods_KegerWeighterTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C04E4F3A1B4A2B4E5FFC040 /* Pods_KegerWeighterTests.framework */; };
+		735FF4912590C3033F0B4C07 /* Pods_KegerWeighter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9861D85F237912D9B5EB089E /* Pods_KegerWeighter.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildRule section */
@@ -86,12 +83,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		17BD71427F2DC5C26279FB27 /* Pods-KegerWeighterTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KegerWeighterTests.release.xcconfig"; path = "Target Support Files/Pods-KegerWeighterTests/Pods-KegerWeighterTests.release.xcconfig"; sourceTree = "<group>"; };
 		25565DF4276780C800F7D80E /* TrendsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendsView.swift; sourceTree = "<group>"; };
 		25565DF62768F99500F7D80E /* KegService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KegService.swift; sourceTree = "<group>"; };
 		255D512E2759713600E05AB3 /* KegPercentageCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KegPercentageCircle.swift; sourceTree = "<group>"; };
 		2565EAA527698D21007ED5AE /* ResetKegView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetKegView.swift; sourceTree = "<group>"; };
 		2565EAAA276A201E007ED5AE /* KegerWeighterApp+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KegerWeighterApp+Injection.swift"; sourceTree = "<group>"; };
 		2565EAAC276A2292007ED5AE /* FirestoreKegRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreKegRepository.swift; sourceTree = "<group>"; };
+		2577D9682782832900064752 /* UserNotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNotificationService.swift; sourceTree = "<group>"; };
+		2577D96A27834F7600064752 /* ResetPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordView.swift; sourceTree = "<group>"; };
 		25817700275664DD000A0888 /* KegerWeighter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KegerWeighter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		25817703275664DD000A0888 /* KegerWeighterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KegerWeighterApp.swift; sourceTree = "<group>"; };
 		25817705275664DD000A0888 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -129,6 +129,14 @@
 		25AB92D12763AC13007B05DC /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		25AB92D327650D9E007B05DC /* AddKegViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddKegViewModel.swift; sourceTree = "<group>"; };
 		25C564FE275E70260095F250 /* KegCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KegCardView.swift; sourceTree = "<group>"; };
+		4C1C3DE8E5A1EC7ABE7ABC53 /* Pods_KegerWeighter_KegerWeighterUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KegerWeighter_KegerWeighterUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6477735FB2C4D38E1AF2D083 /* Pods-KegerWeighter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KegerWeighter.debug.xcconfig"; path = "Target Support Files/Pods-KegerWeighter/Pods-KegerWeighter.debug.xcconfig"; sourceTree = "<group>"; };
+		9861D85F237912D9B5EB089E /* Pods_KegerWeighter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KegerWeighter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C04E4F3A1B4A2B4E5FFC040 /* Pods_KegerWeighterTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KegerWeighterTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3CBCA554B349AD31EC34D2B /* Pods-KegerWeighterTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KegerWeighterTests.debug.xcconfig"; path = "Target Support Files/Pods-KegerWeighterTests/Pods-KegerWeighterTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C9513A3D922E4E12B8582F81 /* Pods-KegerWeighter-KegerWeighterUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KegerWeighter-KegerWeighterUITests.debug.xcconfig"; path = "Target Support Files/Pods-KegerWeighter-KegerWeighterUITests/Pods-KegerWeighter-KegerWeighterUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		D494648D2DB32B2C74B73A72 /* Pods-KegerWeighter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KegerWeighter.release.xcconfig"; path = "Target Support Files/Pods-KegerWeighter/Pods-KegerWeighter.release.xcconfig"; sourceTree = "<group>"; };
+		FB6DA457F2A1636949F5A447 /* Pods-KegerWeighter-KegerWeighterUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KegerWeighter-KegerWeighterUITests.release.xcconfig"; path = "Target Support Files/Pods-KegerWeighter-KegerWeighterUITests/Pods-KegerWeighter-KegerWeighterUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,15 +144,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2581773B27567EA6000A0888 /* FirebaseMessaging in Frameworks */,
-				2584B265276B7DDC007BDFD5 /* BottomSheet in Frameworks */,
-				25565DF327677FD500F7D80E /* SwiftUICharts in Frameworks */,
-				2565EAA9276A1FCE007ED5AE /* Resolver in Frameworks */,
-				255D512C2757DF0D00E05AB3 /* GoogleSignIn in Frameworks */,
-				25A73871275F06F500DFF080 /* FirebaseFirestoreSwift-Beta in Frameworks */,
-				25AB92D62765188C007B05DC /* FirebaseFunctions in Frameworks */,
-				2581773727567EA6000A0888 /* FirebaseAuth in Frameworks */,
-				2581773927567EA6000A0888 /* FirebaseFirestore in Frameworks */,
+				735FF4912590C3033F0B4C07 /* Pods_KegerWeighter.framework in Frameworks */,
+				2577D965276C377300064752 /* SwiftUICharts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,6 +153,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44E7CF1FABCE8EA083B5E9D8 /* Pods_KegerWeighterTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,6 +161,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0688005FC8EFD654E2223471 /* Pods_KegerWeighter_KegerWeighterUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,6 +176,7 @@
 				2581771F275664E3000A0888 /* KegerWeighterUITests */,
 				25817701275664DD000A0888 /* Products */,
 				25A7386F275F06F500DFF080 /* Frameworks */,
+				86B9A1513A8388791B7E68A5 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -251,6 +255,7 @@
 				25565DF4276780C800F7D80E /* TrendsView.swift */,
 				2565EAA527698D21007ED5AE /* ResetKegView.swift */,
 				2584B268276BB938007BDFD5 /* NoKegsView.swift */,
+				2577D96A27834F7600064752 /* ResetPasswordView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -291,6 +296,7 @@
 			children = (
 				258177472756A32B000A0888 /* SignInWithAppleService.swift */,
 				25565DF62768F99500F7D80E /* KegService.swift */,
+				2577D9682782832900064752 /* UserNotificationService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -305,6 +311,9 @@
 		25A7386F275F06F500DFF080 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9861D85F237912D9B5EB089E /* Pods_KegerWeighter.framework */,
+				4C1C3DE8E5A1EC7ABE7ABC53 /* Pods_KegerWeighter_KegerWeighterUITests.framework */,
+				9C04E4F3A1B4A2B4E5FFC040 /* Pods_KegerWeighterTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -318,6 +327,19 @@
 			path = Repositories;
 			sourceTree = "<group>";
 		};
+		86B9A1513A8388791B7E68A5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6477735FB2C4D38E1AF2D083 /* Pods-KegerWeighter.debug.xcconfig */,
+				D494648D2DB32B2C74B73A72 /* Pods-KegerWeighter.release.xcconfig */,
+				C9513A3D922E4E12B8582F81 /* Pods-KegerWeighter-KegerWeighterUITests.debug.xcconfig */,
+				FB6DA457F2A1636949F5A447 /* Pods-KegerWeighter-KegerWeighterUITests.release.xcconfig */,
+				A3CBCA554B349AD31EC34D2B /* Pods-KegerWeighterTests.debug.xcconfig */,
+				17BD71427F2DC5C26279FB27 /* Pods-KegerWeighterTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -325,9 +347,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 25817725275664E3000A0888 /* Build configuration list for PBXNativeTarget "KegerWeighter" */;
 			buildPhases = (
+				841C06B8F583D7BA7C3739E5 /* [CP] Check Pods Manifest.lock */,
 				258176FC275664DC000A0888 /* Sources */,
 				258176FD275664DC000A0888 /* Frameworks */,
 				258176FE275664DC000A0888 /* Resources */,
+				30A730962F610FDFF38AE871 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 				255D512D2757FB6D00E05AB3 /* PBXBuildRule */,
@@ -336,15 +360,7 @@
 			);
 			name = KegerWeighter;
 			packageProductDependencies = (
-				2581773627567EA6000A0888 /* FirebaseAuth */,
-				2581773827567EA6000A0888 /* FirebaseFirestore */,
-				2581773A27567EA6000A0888 /* FirebaseMessaging */,
-				255D512B2757DF0D00E05AB3 /* GoogleSignIn */,
-				25A73870275F06F500DFF080 /* FirebaseFirestoreSwift-Beta */,
-				25AB92D52765188C007B05DC /* FirebaseFunctions */,
-				25565DF227677FD500F7D80E /* SwiftUICharts */,
-				2565EAA8276A1FCE007ED5AE /* Resolver */,
-				2584B264276B7DDC007BDFD5 /* BottomSheet */,
+				2577D964276C377300064752 /* SwiftUICharts */,
 			);
 			productName = KegerWeighter;
 			productReference = 25817700275664DD000A0888 /* KegerWeighter.app */;
@@ -354,6 +370,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 25817728275664E3000A0888 /* Build configuration list for PBXNativeTarget "KegerWeighterTests" */;
 			buildPhases = (
+				0BFFB70954BCC919059F4270 /* [CP] Check Pods Manifest.lock */,
 				2581770D275664E3000A0888 /* Sources */,
 				2581770E275664E3000A0888 /* Frameworks */,
 				2581770F275664E3000A0888 /* Resources */,
@@ -372,9 +389,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2581772B275664E3000A0888 /* Build configuration list for PBXNativeTarget "KegerWeighterUITests" */;
 			buildPhases = (
+				0C040A957723782EE7B0E053 /* [CP] Check Pods Manifest.lock */,
 				25817718275664E3000A0888 /* Sources */,
 				25817719275664E3000A0888 /* Frameworks */,
 				2581771A275664E3000A0888 /* Resources */,
+				DAD3693F9D432158E20F996A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -418,11 +437,7 @@
 			);
 			mainGroup = 258176F7275664DC000A0888;
 			packageReferences = (
-				2581773527567EA5000A0888 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
-				255D512A2757DF0C00E05AB3 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
-				25565DF127677FD400F7D80E /* XCRemoteSwiftPackageReference "ChartView" */,
-				2565EAA7276A1FCD007ED5AE /* XCRemoteSwiftPackageReference "Resolver" */,
-				2584B263276B7DDB007BDFD5 /* XCRemoteSwiftPackageReference "bottom-sheet" */,
+				2577D963276C377300064752 /* XCRemoteSwiftPackageReference "ChartView" */,
 			);
 			productRefGroup = 25817701275664DD000A0888 /* Products */;
 			projectDirPath = "";
@@ -463,6 +478,109 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0BFFB70954BCC919059F4270 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KegerWeighterTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0C040A957723782EE7B0E053 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KegerWeighter-KegerWeighterUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		30A730962F610FDFF38AE871 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KegerWeighter/Pods-KegerWeighter-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KegerWeighter/Pods-KegerWeighter-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KegerWeighter/Pods-KegerWeighter-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		841C06B8F583D7BA7C3739E5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KegerWeighter-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DAD3693F9D432158E20F996A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KegerWeighter-KegerWeighterUITests/Pods-KegerWeighter-KegerWeighterUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-KegerWeighter-KegerWeighterUITests/Pods-KegerWeighter-KegerWeighterUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-KegerWeighter-KegerWeighterUITests/Pods-KegerWeighter-KegerWeighterUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		258176FC275664DC000A0888 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -471,6 +589,7 @@
 				2584B267276B9371007BDFD5 /* FirebaseUser.swift in Sources */,
 				2581774027568590000A0888 /* AuthViewModel.swift in Sources */,
 				2565EAA627698D21007ED5AE /* ResetKegView.swift in Sources */,
+				2577D96B27834F7800064752 /* ResetPasswordView.swift in Sources */,
 				25A7386E275EFB9A00DFF080 /* Keg.swift in Sources */,
 				2581774227569556000A0888 /* DashboardView.swift in Sources */,
 				25817706275664DD000A0888 /* ContentView.swift in Sources */,
@@ -496,6 +615,7 @@
 				255D512F2759713700E05AB3 /* KegPercentageCircle.swift in Sources */,
 				25817744275695A7000A0888 /* DashboardViewModel.swift in Sources */,
 				25A7387C2761317A00DFF080 /* SettingsView.swift in Sources */,
+				2577D9692782832D00064752 /* UserNotificationService.swift in Sources */,
 				25AB92CA27615D28007B05DC /* SettingsViewModel.swift in Sources */,
 				2584B269276BB938007BDFD5 /* NoKegsView.swift in Sources */,
 			);
@@ -651,6 +771,7 @@
 		};
 		25817726275664E3000A0888 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6477735FB2C4D38E1AF2D083 /* Pods-KegerWeighter.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -674,6 +795,7 @@
 		};
 		25817727275664E3000A0888 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D494648D2DB32B2C74B73A72 /* Pods-KegerWeighter.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -697,6 +819,7 @@
 		};
 		25817729275664E3000A0888 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A3CBCA554B349AD31EC34D2B /* Pods-KegerWeighterTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -719,6 +842,7 @@
 		};
 		2581772A275664E3000A0888 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 17BD71427F2DC5C26279FB27 /* Pods-KegerWeighterTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -741,6 +865,7 @@
 		};
 		2581772C275664E3000A0888 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C9513A3D922E4E12B8582F81 /* Pods-KegerWeighter-KegerWeighterUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -761,6 +886,7 @@
 		};
 		2581772D275664E3000A0888 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB6DA457F2A1636949F5A447 /* Pods-KegerWeighter-KegerWeighterUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -821,41 +947,9 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		25565DF127677FD400F7D80E /* XCRemoteSwiftPackageReference "ChartView" */ = {
+		2577D963276C377300064752 /* XCRemoteSwiftPackageReference "ChartView" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/AppPear/ChartView";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
-			};
-		};
-		255D512A2757DF0C00E05AB3 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 6.0.0;
-			};
-		};
-		2565EAA7276A1FCD007ED5AE /* XCRemoteSwiftPackageReference "Resolver" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/hmlongco/Resolver.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
-			};
-		};
-		2581773527567EA5000A0888 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 8.9.1;
-			};
-		};
-		2584B263276B7DDB007BDFD5 /* XCRemoteSwiftPackageReference "bottom-sheet" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/weitieda/bottom-sheet";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 1.0.0;
@@ -864,50 +958,10 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		25565DF227677FD500F7D80E /* SwiftUICharts */ = {
+		2577D964276C377300064752 /* SwiftUICharts */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 25565DF127677FD400F7D80E /* XCRemoteSwiftPackageReference "ChartView" */;
+			package = 2577D963276C377300064752 /* XCRemoteSwiftPackageReference "ChartView" */;
 			productName = SwiftUICharts;
-		};
-		255D512B2757DF0D00E05AB3 /* GoogleSignIn */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 255D512A2757DF0C00E05AB3 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
-			productName = GoogleSignIn;
-		};
-		2565EAA8276A1FCE007ED5AE /* Resolver */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 2565EAA7276A1FCD007ED5AE /* XCRemoteSwiftPackageReference "Resolver" */;
-			productName = Resolver;
-		};
-		2581773627567EA6000A0888 /* FirebaseAuth */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 2581773527567EA5000A0888 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAuth;
-		};
-		2581773827567EA6000A0888 /* FirebaseFirestore */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 2581773527567EA5000A0888 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseFirestore;
-		};
-		2581773A27567EA6000A0888 /* FirebaseMessaging */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 2581773527567EA5000A0888 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseMessaging;
-		};
-		2584B264276B7DDC007BDFD5 /* BottomSheet */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 2584B263276B7DDB007BDFD5 /* XCRemoteSwiftPackageReference "bottom-sheet" */;
-			productName = BottomSheet;
-		};
-		25A73870275F06F500DFF080 /* FirebaseFirestoreSwift-Beta */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 2581773527567EA5000A0888 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = "FirebaseFirestoreSwift-Beta";
-		};
-		25AB92D52765188C007B05DC /* FirebaseFunctions */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 2581773527567EA5000A0888 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseFunctions;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

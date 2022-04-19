@@ -14,6 +14,7 @@ import Resolver
 class DashboardViewModel : ObservableObject{
     @Injected var sessionStore: SessionStore
     @Published var kegViewModels = [KegViewModel]()
+    @Published var hasKegs:Bool = false
     private var cancellables = Set<AnyCancellable>()
     
     var kegsPath: String = "kegs"
@@ -66,6 +67,7 @@ class DashboardViewModel : ObservableObject{
                     print(keg)
                     if let kegOffset = self.kegViewModels.firstIndex(where: {$0._id == keg.getID()}) {
                         self.kegViewModels[kegOffset].beerType = keg.beerType;
+                        self.kegViewModels[kegOffset].online = keg.online;
                         self.kegViewModels[kegOffset].location = keg.location;
                         self.kegViewModels[kegOffset].percLeft = keg.data.percLeft;
                         self.kegViewModels[kegOffset].beersLeft = keg.data.beersLeft;
@@ -91,7 +93,7 @@ class DashboardViewModel : ObservableObject{
                         self.kegViewModels.append(newKvm)
                     }
                 }
-
+            self.hasKegs = self.kegViewModels.count > 0;
             print(self.kegViewModels)
 
         }

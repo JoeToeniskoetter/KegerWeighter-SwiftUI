@@ -31,8 +31,9 @@ class FirestoreKegRepository: BaseTaskRepository, KegRepository, ObservableObjec
 
 
     @Injected var db: Firestore
+    @Injected var functions: Functions
     @Published var authenticationService: SessionStore = Resolver.resolve()
-    @LazyInjected var functions: Functions
+    @Published var loading:Bool = false
 
     var kegsPath: String = "kegs"
     var userId: String = "unknown"
@@ -49,82 +50,7 @@ class FirestoreKegRepository: BaseTaskRepository, KegRepository, ObservableObjec
             }
             .assign(to: \.userId, on: self)
             .store(in: &cancellables)
-
-//        // (re)load data if user changes
-//        authenticationService.$session
-//            .receive(on: DispatchQueue.main)
-//            .sink { [weak self] user in
-//                self?.loadData()
-//            }
-//            .store(in: &cancellables)
     }
-
-//    private func loadData() {
-//        if listenerRegistration != nil {
-//            listenerRegistration?.remove()
-//        }
-//        listenerRegistration = db.collection(kegsPath)
-//            .whereField("userId", isEqualTo: self.userId)
-//            .addSnapshotListener { (querySnapshot, error) in
-//
-//                if let querySnapshot = querySnapshot {
-//
-//
-//                    let newKegs = querySnapshot.documents.compactMap { queryDocumentSnapshot -> Keg? in
-//                        print(queryDocumentSnapshot.data())
-//                        do{
-//                            let newKeg = try queryDocumentSnapshot.data(as: Keg.self)
-//                            return newKeg
-//                        } catch let DecodingError.dataCorrupted(context) {
-//                            print(context)
-//                        } catch let DecodingError.keyNotFound(key, context) {
-//                            print("Key '\(key)' not found:", context.debugDescription)
-//                            print("codingPath:", context.codingPath)
-//                        } catch let DecodingError.valueNotFound(value, context) {
-//                            print("Value '\(value)' not found:", context.debugDescription)
-//                            print("codingPath:", context.codingPath)
-//                        } catch let DecodingError.typeMismatch(type, context)  {
-//                            print("Type '\(type)' mismatch:", context.debugDescription)
-//                            print("codingPath:", context.codingPath)
-//                        } catch {
-//                            print("error: ", error)
-//                        }
-//                        return nil
-//                    }
-//
-//                    for keg in newKegs{
-//                        if let kegOffset = self.kegs.firstIndex(where: {$0._id == keg.getID()}) {
-//                            self.kegs[kegOffset].beerType = keg.beerType;
-//                            self.kegs[kegOffset].location = keg.location;
-//                            self.kegs[kegOffset].percLeft = keg.data.percLeft
-//                            self.kegs[kegOffset].beersLeft = keg.data.beersLeft;
-//                            self.kegs[kegOffset].firstNotificationPerc = keg.firstNotificationPerc;
-//                            self.kegs[kegOffset].secondNotificationPerc = keg.secondNotificationPerc;
-//                            self.kegs[kegOffset].subscribed = keg.subscribed;
-//
-//                            self.kegs[kegOffset].customTare = keg.data.customTare;
-//                            self.kegs[kegOffset].weight = keg.data.weight;
-//                            self.kegs[kegOffset].temp = keg.data.temp;
-//                            self.kegs[kegOffset].beersToday = keg.data.beersToday;
-//                            self.kegs[kegOffset].beersDaily = keg.data.beersDaily;
-//                            self.kegs[kegOffset].beersDailyArray = keg.data.beersDailyArray;
-//                            self.kegs[kegOffset].beersThisWeek = keg.data.beersThisWeek;
-//                            self.kegs[kegOffset].beersWeekly = keg.data.beersWeekly;
-//                            self.kegs[kegOffset].beersThisMonth = keg.data.beersThisMonth;
-//                            self.kegs[kegOffset].beersMonthly = keg.data.beersMonthly;
-//                            self.kegs[kegOffset].firstNotificationSent = keg.data.firstNotificationSent;
-//                            self.kegs[kegOffset].secondNotificationSent = keg.data.secondNotificationSent;
-//                            self.kegs[kegOffset].potentialNewKeg = keg.potentialNewKeg;
-//                        } else {
-//                            self.kegs.append(KegViewModel(keg:keg))
-//                        }
-//                    }
-//
-//                    print(self.kegs)
-//
-//                }
-//            }
-//    }
 
 
     func addKeg(kvm: AddKegViewModel, completion: @escaping (_ success: Bool) -> Void){
@@ -167,6 +93,7 @@ class FirestoreKegRepository: BaseTaskRepository, KegRepository, ObservableObjec
     }
 
     func updateKeg(keg:Keg, id: String, completion: @escaping (_ success: Bool) -> Void){
+        self.loading = true
         self.db.collection(kegsPath)
             .document(id)
             .updateData([
@@ -179,13 +106,40 @@ class FirestoreKegRepository: BaseTaskRepository, KegRepository, ObservableObjec
             ]){ error in
                 if let error = error {
                     print("Error updating document: \(error)")
+                    self.loading = false
                     completion(false)
                 } else {
                     print("Document successfully updated!")
+                    self.loading = false
                     completion(true)
                 }
             }
 
+    }
+    
+    func resetKeg(keg: Keg, clearData:Bool, completion: @escaping (_ success: Bool) -> Void){
+        self.loading = true
+        self.functions.httpsCallable("resetKeg").call([
+            "id": keg.id,
+            "clearData": clearData
+        ]) { result, error in
+            if let error = error as NSError? {
+                if error.domain == FunctionsErrorDomain {
+                    let code = FunctionsErrorCode(rawValue: error.code)
+                    let message = error.localizedDescription
+                    let details = error.userInfo[FunctionsErrorDetailsKey]
+                    print(code, message, details)
+                }
+                self.loading = false
+                completion(false)
+            }
+
+            if let data = result?.data {
+                print(data)
+                self.loading = false
+                completion(true)
+            }
+        }
     }
 
 }

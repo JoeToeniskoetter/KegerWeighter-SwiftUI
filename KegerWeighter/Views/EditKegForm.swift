@@ -13,6 +13,8 @@ struct EditKegFormView: View {
     @Environment(\.presentationMode) var presentationMode
     @StateObject var kegViewModel: KegViewModel
     @State var notificationsEnabled: Bool = false
+    @State private var showingAlert = false
+    @State private var loading = false
     
     func validateForm() -> Bool{
         return self.kegViewModel.beerType.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty || self.kegViewModel.location.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty ||
@@ -62,24 +64,104 @@ struct EditKegFormView: View {
                             .keyboardType(.decimalPad)
                         
                     }
+                    
                 }
-                Button("Save"){
-                    self.kegViewModel.update(completion: {result in
-                        if result {
-                            presentationMode.wrappedValue.dismiss()
-                        }else{
-                            print("error")
+                Section(header:Text("Reset Keg")){
+                    Button("Reset Keg"){
+                        self.showingAlert = true
+                    }.foregroundColor(.red)
+                        .alert(isPresented: $showingAlert) {
+                            Alert(
+                                title: Text("Reset Keg?"),
+                                message: Text("This will clear out any incorrect readings"),
+                                primaryButton: .destructive(Text("Reset"), action:{
+                                    self.loading = true
+                                    self.kegViewModel.reset( clearData: true, completion: { sucess in
+                                        
+                                        if(sucess){
+                                            print("keg reset success")
+                                            self.loading = false
+                                            self.presentationMode.wrappedValue.dismiss()
+                                        }else{
+                                            print("could not reset keg")
+                                        }
+                                    })
+                                }),
+                                secondaryButton: .default(Text("Cancel"), action:{
+                                    print("Cancel")
+                                })
+                            )
                         }
-                    })
-                }.disabled(self.validateForm())
-                
-            }.navigationBarTitle("New Keg")
-                .toolbar {
-                    Button("Cancel"){
-                        presentationMode.wrappedValue.dismiss()
-                    }
                 }
+                
+            }.navigationBarTitle("Edit Keg")
+                .toolbar {
+                    ToolbarItem(placement: ToolbarItemPlacement.navigationBarTrailing) {
+                        Button("Cancel"){
+                            presentationMode.wrappedValue.dismiss()
+                        }
+                    }
+                    
+                    ToolbarItem(placement: ToolbarItemPlacement.navigationBarLeading) {
+                        Button(action: {
+                            self.kegViewModel.update(completion: {result in
+                                if result {
+                                    presentationMode.wrappedValue.dismiss()
+                                }else{
+                                    print("error")
+                                }
+                            })
+                        }, label: {
+                            if self.loading{
+                                ProgressView()
+                            }else{
+                                Text("Save")
+                            }
+                        }).disabled(self.validateForm())
+                    }
+                    
+                }
+            
         }
     }
 }
 
+
+struct EditKegFormView_Previews: PreviewProvider {
+    static var previews: some View {
+        EditKegFormView(kegViewModel:KegViewModel(keg: Keg(
+            beerType: "Bud Select",
+            online: true,
+            location: "Basement 2",
+            kegSize: .halfBarrel,
+            firstNotificationPerc: 0,
+            secondNotificationPerc: 0,
+            subscribed: false,
+            data : KegData(
+                customTare: 0,
+                beersLeft:90,
+                weight:10,
+                percLeft: 0.0,
+                temp: 30,
+                beersToday:0,
+                beersDaily: [
+                    "12/13/2021":1,
+                    "12/14/2021":0,
+                    "12/15/2021":0,
+                    "12/16/2021":10
+                ],
+                beersDailyArray: [3,4,5,6,7],
+                beersThisWeek: 0,
+                beersWeekly: [:],
+                beersWeeklyArray: [0,0,0,0,0],
+                beersThisMonth: 0,
+                beersMonthly: [:],
+                beersMonthlyArray:[0,0,0,0,0],
+                firstNotificationSent: false,
+                secondNotificationSent: false
+            ),
+            createdAt:0,
+            potentialNewKeg: true
+        )))
+    }
+}

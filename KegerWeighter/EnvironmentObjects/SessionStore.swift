@@ -14,12 +14,14 @@ import Resolver
 class SessionStore: ObservableObject{
     @Published var user: User?
     @Injected var firestore: Firestore
+    @Injected var auth: Auth
+    @Injected var functions: Functions
     private var handle: AuthStateDidChangeListenerHandle?
     @Published var error:String = ""
     
     init(){
         print("Creating new instance")
-        self.handle = Auth.auth().addStateDidChangeListener{ (auth, user) in
+        self.handle = auth.addStateDidChangeListener{ (auth, user) in
             if let user = user{
                 print("USER SIGNED IN")
                 self.user = user
@@ -32,7 +34,7 @@ class SessionStore: ObservableObject{
     func signOut() {
         self.removeFCMToken()
       do {
-        try Auth.auth().signOut()
+        try auth.signOut()
       }
       catch {
         print("Error when trying to sign out: \(error.localizedDescription)")
@@ -40,7 +42,7 @@ class SessionStore: ObservableObject{
     }
     
     public func signInWithEmail(email:String, password:String){
-        Auth.auth().signIn(withEmail: email, password: password) {authDataResult, error in
+        auth.signIn(withEmail: email, password: password) {authDataResult, error in
             if let error = error{
                 print("ERROR: ", error)
                 self.error = error.localizedDescription
@@ -49,7 +51,7 @@ class SessionStore: ObservableObject{
     }
     
     func removeFCMToken(){
-        let userId = Auth.auth().currentUser?.uid
+        let userId = auth.currentUser?.uid
         let token = Messaging.messaging().fcmToken
         
         if token == nil{
@@ -70,7 +72,7 @@ class SessionStore: ObservableObject{
     
     deinit {
         if let handle = handle{
-            Auth.auth().removeStateDidChangeListener(handle)
+            auth.removeStateDidChangeListener(handle)
         }
     }
     

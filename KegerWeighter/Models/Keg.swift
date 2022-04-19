@@ -12,6 +12,7 @@ struct Keg: Codable, Identifiable{
 
     @DocumentID var id:String? = UUID().uuidString;
     var beerType: String;
+    var online:Bool;
     var location: String;
     var kegSize: KegSize;
     var firstNotificationPerc: Int;
@@ -27,6 +28,7 @@ struct Keg: Codable, Identifiable{
     
     enum CodingKeys: String, CodingKey{
         case id
+        case online
         case beerType
         case location
         case kegSize

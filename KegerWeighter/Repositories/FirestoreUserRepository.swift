@@ -30,12 +30,12 @@ class FirestoreUserRepository: UserRepository, ObservableObject {
     
     var userPath: String = "users"
     var userId: String = "unknown"
-
+    
     private var listenerRegistration: ListenerRegistration?
     private var cancellables = Set<AnyCancellable>()
     
     init() {
-            print("Initializing user repo")
+        print("Initializing user repo")
         authenticationService.$user
             .compactMap { user in
                 user?.uid
@@ -50,6 +50,7 @@ class FirestoreUserRepository: UserRepository, ObservableObject {
                 
                 if user != nil {
                     self?.fetchUserInfo()
+                    self?.registerforNotificaitons()
                 }
             }
             .store(in: &cancellables)
@@ -62,6 +63,22 @@ class FirestoreUserRepository: UserRepository, ObservableObject {
                 }
             }.store(in: &cancellables)
         
+    }
+    
+    func registerforNotificaitons(){
+        
+        
+        
+        let center  = UNUserNotificationCenter.current()
+        
+        center.requestAuthorization(options: [.sound, .alert, .badge]) { (granted, error) in
+            if error == nil{
+                DispatchQueue.main.async {
+                  UIApplication.shared.registerForRemoteNotifications()
+                }
+            }
+            
+        }
     }
     
     func fetchUserInfo(){

@@ -7,6 +7,7 @@
 
 import Foundation
 import FirebaseFunctions
+import Resolver
 
 class AddKegViewModel: ObservableObject {
     @Published var notificationsEnabled: Bool = false
@@ -19,14 +20,14 @@ class AddKegViewModel: ObservableObject {
     @Published var errorMessage = ""
     @Published var errorAddingKeg: Bool = false
     @Published var loading: Bool = false
-    private var functions = Functions.functions()
+    @Injected var functions: Functions
     
     func isFormValid()-> Bool{
         return self.kegerWeighterId.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty || self.beerType.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty || self.location.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
     }
     
     func addKeg(completion: @escaping (_ success: Bool) -> Void){
-//        self.functions.useEmulator(withHost: "localhost", port:5001)
+        print(self.functions)
         self.loading = true
         self.functions.httpsCallable("addKeg").call([
             "id": self.kegerWeighterId,
